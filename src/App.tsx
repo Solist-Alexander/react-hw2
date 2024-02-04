@@ -1,26 +1,75 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import character from "./components/Character";
+import Character from "./components/Character";
 
-function App() {
+const App = () => {
+
+  interface ICharacters {
+    id:number,
+    name: string,
+    status: string,
+    species: string,
+    gender: string,
+    image: string
+  }
+
+  let characters:ICharacters[] = [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Morty Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Beth Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Jerry Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        {characters.map(character =>
+            <Character
+                id={character.id}
+                name={character.name}
+                status={character.status}
+                species={character.species}
+                gender={character.gender}
+                image={character.image}
+          ></Character>)}
+
+      </div>
   );
-}
+};
 
 export default App;
