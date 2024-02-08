@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {postService} from "../../../services/postService";
 import Post from "../Post/Post";
-import {IPost} from "../../../interfaces/postInterfaces/postInterfaces";
+import {IPost, IPropsDetails} from "../../../interfaces/postInterfaces/postInterfaces";
 import PostDetails from "../PostDetails/PostDetails";
 
 const Posts = () => {
@@ -17,8 +17,9 @@ const Posts = () => {
 
     return (
         <div>
-            {posts.map((post: IPost) => <Post key={post.id} post={post} getPostDetails={getPostDetails}  postDetails={postDetails}/>)}
             {postDetails && <PostDetails  postDetails={postDetails}/> }
+            <hr/>
+            {posts.map((post: IPost) => <Post key={post.id} post={post} getPostDetails={getPostDetails}/>)}
         </div>
     );
 };

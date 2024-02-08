@@ -6,10 +6,12 @@ interface IPost {
 interface IPostProps {
     post: IPost;
     getPostDetails: (post: IPost) => void;
+
+}
+interface IPropsDetails{
     postDetails: IPost | null;
 }
 
-
 export type {
-    IPost, IPostProps
+    IPost, IPostProps, IPropsDetails
 }

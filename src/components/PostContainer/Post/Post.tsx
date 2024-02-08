@@ -3,13 +3,8 @@ import {IPostProps} from "../../../interfaces/postInterfaces/postInterfaces";
 
 
 const Post = ({post, getPostDetails}:IPostProps) => {
-    const {id, title, body} = post
+    const {id, title} = post
 
-    // const postDetails = (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    //     ev.preventDefault()
-    //     let p = document.createElement('p')
-    //     p.innerText = body
-    // }
     return (
         <div>
             <div>ID: {id}</div>

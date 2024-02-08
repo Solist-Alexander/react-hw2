@@ -1,11 +1,13 @@
 import React from 'react';
-import {IPostProps} from "../../../interfaces/postInterfaces/postInterfaces";
+import { IPropsDetails} from "../../../interfaces/postInterfaces/postInterfaces";
 
-const PostDetails = ({postDetails}: IPostProps) => {
+const PostDetails = ({postDetails}: IPropsDetails) => {
     if (!postDetails) return null;
-    const {body} = postDetails
+    const {body, id, title} = postDetails
     return (
         <div>
+            <div>ID: {id}</div>
+            <div>Title: {title}</div>
             <div>body: {body}</div>
         </div>
     );
