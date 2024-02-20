@@ -27,7 +27,7 @@ const UserForm = ({setTrigger}) => {
                 }/>
                 <input type="text" placeholder={'username'} {...register('username',{
                     pattern:{
-                        value: /^[a-zA-Zа-яА-яёЁіІїЇєЄҐґ]{1,20}$/,
+                        value: /^[a-zA-Zа-яА-яёЁіІїЇєЄҐґ ]{1,20}$/,
                         maxLength: 20,
                         minLength: 1,
                         message: 'много символов'
