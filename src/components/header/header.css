@@ -1,0 +1,16 @@
+.headerDiv{
+    background: khaki;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 10vh;
+}
+.headerDiv a {
+    text-decoration: none;
+    font-size: 30px;
+    color: darkcyan;
+}
+.headerDiv a[class='active']{
+color: darkred;
+}
