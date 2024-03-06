@@ -1,0 +1,7 @@
+.divCarForm{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}

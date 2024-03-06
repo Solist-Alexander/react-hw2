@@ -1,0 +1,20 @@
+.divCar{
+    border: 2px grey solid;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.buttonCar{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 5px;
+
+}
+.buttonCar2{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 140px;
+}
