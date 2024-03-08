@@ -13,7 +13,7 @@ const CarForm = () => {
         mode:"all",
         resolver: joiResolver(carValidator)
     })
-    const {carForUpdate} = useSelector(state => state.cars)
+    const {carForUpdate, trigger} = useSelector(state => state.cars)
     const dispatch = useDispatch();
 
     useEffect(()=>{
@@ -26,12 +26,13 @@ const CarForm = () => {
 
     const save = async (car) => {
         await carServices.create(car)
-
+        dispatch(carActions.trigger())
         reset()
     }
 
     const update = async (car) =>{
-        carServices.updateById(carForUpdate.id, car)
+      await carServices.updateById(carForUpdate.id, car)
+        dispatch(carActions.trigger())
         dispatch(carActions.setCarForUpdate(null))
         reset()
     }

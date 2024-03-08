@@ -13,6 +13,7 @@ const Car = ({car}) => {
 
     const deleteById = async (id)=>{
        await carServices.deleteById(id)
+        dispatch(carActions.trigger())
     }
 
 
