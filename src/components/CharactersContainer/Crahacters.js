@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () => {
+const Crahacters = () => {
     return (
         <div>
-
+            asdads
         </div>
     );
 };
 
-export default App;
+export default Crahacters;

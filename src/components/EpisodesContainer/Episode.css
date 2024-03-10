@@ -1,0 +1,15 @@
+.episodesDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.episodeDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: black 1px solid;
+    width: 350px;
+}
+
+

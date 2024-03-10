@@ -1,0 +1,10 @@
+.headerDiv{
+    height: 15vh;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
