@@ -6,6 +6,10 @@ const characters = '/character'
 const urls = {
     episodes:{
         base: episodes
+    },
+    characters:{
+        base: characters,
+        byId: (id)=> `${characters}/${id}`
     }
 }
 

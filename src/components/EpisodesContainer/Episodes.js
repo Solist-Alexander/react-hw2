@@ -17,7 +17,6 @@ const Episodes = () => {
     useEffect(() => {
         dispatch(episodeActions.getAll({page: currentPage}))
     }, [currentPage])
-    console.log(episodes)
     return (
         <div>
             <div className={'episodesDiv'}>
